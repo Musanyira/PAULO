@@ -7,6 +7,8 @@ model = joblib.load("model.pkl")
 
 st.title("🐝 Honey Yield Prediction App")
 st.write("This AI application predicts honey yield (kg) based on environmental and hive management factors.")
+st.markdown("**PREPARED BY FUTURE PROGRAMMER GROUP**")
+st.markdown("© 2026 programmer group")
 
 # --- User Inputs ---
 rainfall = st.number_input("Rainfall (mm)", min_value=0.0, step=10.0)
