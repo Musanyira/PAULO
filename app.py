@@ -2,13 +2,18 @@ import streamlit as st
 import joblib
 import numpy as np
 
+st.markdown("""
+            <style>        
+            {background.color:blue;}
+            </style>
+            """, unsafe_allow_html=True)
+
 # Load the trained model
 model = joblib.load("model.pkl")
 
 st.title("🐝 Honey Yield Prediction App")
 st.write("This AI application predicts honey yield (kg) based on environmental and hive management factors.")
 st.markdown("**PREPARED BY FUTURE PROGRAMMER GROUP**")
-st.markdown("© 2026 programmer group")
 
 # --- User Inputs ---
 rainfall = st.number_input("Rainfall (mm)", min_value=0.0, step=10.0)
@@ -38,3 +43,8 @@ input_data = np.array([[rainfall, temperature, humidity, num_hives,
 if st.button("Predict Honey Yield"):
     prediction = model.predict(input_data)
     st.success(f"Estimated Honey Yield: {prediction[0]:.2f} kg")
+
+
+# --- Footer --- 
+st.markdown("---")
+st.markdown("© 2026  Programmer Group all the best")
