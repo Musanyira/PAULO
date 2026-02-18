@@ -3,10 +3,10 @@ import joblib
 import numpy as np
 
 st.markdown("""
-            <style>        
-            {background.color:blue;}
-            </style>
-            """, unsafe_allow_html=True)
+    <style>
+    [data-testid="stAppViewContainer"]{ background-color: blue;}
+    </style>
+""", unsafe_allow_html=True)
 
 # Load the trained model
 model = joblib.load("model.pkl")
