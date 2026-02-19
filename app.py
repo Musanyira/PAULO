@@ -2,11 +2,19 @@ import streamlit as st
 import joblib
 import numpy as np
 
+
+
+
+
+
+st.title("Welcome to My Streamlit App")
+
 st.markdown("""
     <style>
-    [data-testid="stAppViewContainer"]{ background-color: blue;}
+    [data-testid="stAppViewContainer"]{ background-color: peachpuff;}
     </style>
 """, unsafe_allow_html=True)
+
 
 # Load the trained model
 model = joblib.load("model.pkl")
